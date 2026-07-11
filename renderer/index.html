@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; frame-src data:;">
+  <title>Resumecraft</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar: resume versions -->
+    <aside id="sidebar">
+      <div class="brand">
+        <span class="brand-icon">📄</span>
+        <div>
+          <div class="brand-name">Resumecraft</div>
+          <div class="brand-sub">Pay once. Own it forever.</div>
+        </div>
+      </div>
+      <button id="btn-new" class="btn btn-primary btn-block">+ New resume</button>
+      <div id="resume-list" class="resume-list"></div>
+    </aside>
+
+    <!-- Editor -->
+    <main id="editor">
+      <div id="empty-state" class="empty-state hidden">
+        <div class="empty-icon">📄</div>
+        <h2>No resume selected</h2>
+        <p>Create a new resume or pick one from the sidebar.<br>Keep one version per job application — duplicate and tailor.</p>
+      </div>
+
+      <div id="editor-body" class="hidden">
+        <div class="editor-toolbar">
+          <input id="resume-name" class="resume-name-input" placeholder="Resume name (e.g. Acme — Senior Dev)">
+          <div class="toolbar-actions">
+            <button id="btn-duplicate" class="btn" title="Duplicate this version to tailor for another job">Duplicate</button>
+            <button id="btn-delete" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+
+        <div class="form-scroll">
+          <details open class="card">
+            <summary>Contact</summary>
+            <div class="grid2">
+              <label>Full name<input data-c="name" placeholder="Jane Doe"></label>
+              <label>Headline / title<input data-c="title" placeholder="Senior Software Engineer"></label>
+              <label>Email<input data-c="email" placeholder="jane@example.com"></label>
+              <label>Phone<input data-c="phone" placeholder="+1 555 123 4567"></label>
+              <label>Location<input data-c="location" placeholder="Austin, TX"></label>
+              <label>Website<input data-c="website" placeholder="janedoe.dev"></label>
+              <label>LinkedIn<input data-c="linkedin" placeholder="linkedin.com/in/janedoe"></label>
+            </div>
+          </details>
+
+          <details open class="card">
+            <summary>Summary</summary>
+            <textarea id="f-summary" rows="4" placeholder="2-4 sentences. What you do, years of experience, your edge."></textarea>
+          </details>
+
+          <details open class="card">
+            <summary>Experience</summary>
+            <div id="exp-list"></div>
+            <button class="btn btn-add" id="btn-add-exp">+ Add position</button>
+          </details>
+
+          <details open class="card">
+            <summary>Education</summary>
+            <div id="edu-list"></div>
+            <button class="btn btn-add" id="btn-add-edu">+ Add education</button>
+          </details>
+
+          <details open class="card">
+            <summary>Skills</summary>
+            <textarea id="f-skills" rows="3" placeholder="One skill per line, or comma-separated: JavaScript, React, PostgreSQL"></textarea>
+          </details>
+
+          <details class="card">
+            <summary>Projects</summary>
+            <div id="proj-list"></div>
+            <button class="btn btn-add" id="btn-add-proj">+ Add project</button>
+          </details>
+
+          <details class="card">
+            <summary>Custom sections</summary>
+            <div id="custom-list"></div>
+            <button class="btn btn-add" id="btn-add-custom">+ Add section</button>
+          </details>
+        </div>
+      </div>
+    </main>
+
+    <!-- Preview -->
+    <section id="preview-pane">
+      <div class="preview-toolbar">
+        <select id="template-select" title="Template"></select>
+        <label class="toggle" title="Strips columns, colors and graphics for maximum ATS parser compatibility">
+          <input type="checkbox" id="ats-toggle"><span>ATS-safe</span>
+        </label>
+        <div class="spacer"></div>
+        <span id="overflow-warning" class="overflow-warning hidden" title="Content is taller than one Letter page">⚠ over 1 page</span>
+        <button id="btn-copy-text" class="btn" title="Copy plain-text version for job portals">Copy text</button>
+        <button id="btn-export-txt" class="btn">Export .txt</button>
+        <button id="btn-export-pdf" class="btn btn-primary">Export PDF</button>
+      </div>
+      <div class="preview-scroll">
+        <iframe id="preview-frame" title="Resume preview"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>

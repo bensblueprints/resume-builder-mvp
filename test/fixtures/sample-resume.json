@@ -1,0 +1,58 @@
+{
+  "contact": {
+    "name": "Jane Doe",
+    "title": "Senior Software Engineer",
+    "email": "jane.doe@example.com",
+    "phone": "+1 555 123 4567",
+    "location": "Austin, TX",
+    "website": "janedoe.dev",
+    "linkedin": "linkedin.com/in/janedoe"
+  },
+  "summary": "Full-stack engineer with 8 years shipping production web apps. Led a team of 5 through a platform rewrite that cut infrastructure spend 35%. Strong in Node.js, React & PostgreSQL.",
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "role": "Senior Software Engineer",
+      "location": "Remote",
+      "start": "Jan 2022",
+      "end": "Present",
+      "bullets": [
+        "Led migration of a monolith to services, cutting deploy time from 45 min to 6 min",
+        "Cut cloud costs 35% ($240k/yr) by right-sizing and moving batch jobs to spot instances",
+        "Mentored 4 mid-level engineers; 2 promoted to senior within 18 months"
+      ]
+    },
+    {
+      "company": "Startly Inc",
+      "role": "Software Engineer",
+      "location": "Austin, TX",
+      "start": "Jun 2018",
+      "end": "Dec 2021",
+      "bullets": [
+        "Built the customer billing system (Stripe) processing $4M/yr",
+        "Introduced CI pipeline that caught 30% of regressions pre-merge"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Texas at Austin",
+      "degree": "B.S. Computer Science",
+      "location": "Austin, TX",
+      "start": "2014",
+      "end": "2018",
+      "notes": "GPA 3.8, Dean's List"
+    }
+  ],
+  "skills": ["JavaScript", "TypeScript", "Node.js", "React", "PostgreSQL", "AWS", "Docker", "CI/CD"],
+  "projects": [
+    {
+      "name": "OpenMetrics Dashboard",
+      "link": "github.com/janedoe/openmetrics",
+      "description": "Self-hosted analytics dashboard, 1.2k GitHub stars."
+    }
+  ],
+  "custom": [
+    { "title": "Certifications", "body": "AWS Solutions Architect Associate (2023)" }
+  ]
+}
