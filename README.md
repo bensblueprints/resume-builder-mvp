@@ -12,7 +12,7 @@ Zety charges **$23.70/month, forever**, to let you fill out a form and download 
 
 Don't want to touch a terminal? Grab the packaged Windows installer (and support development):
 
-**→ [Get Resumecraft on Whop](https://whop.com/onetime-suite)** — pay once, own it forever.
+**→ [Get Resumecraft on Whop](https://whop.com/benjisaiempire/resumecraft-app)** — pay once, own it forever.
 
 ## Features
 
