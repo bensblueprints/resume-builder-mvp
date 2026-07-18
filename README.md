@@ -1,5 +1,9 @@
 # 📄 Resumecraft
 
+## Demo
+
+VIDEO-PLACEHOLDER
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **The resume builder you buy once and own forever.** Pick one of 7 templates, fill structured sections with a live preview beside you, flip on ATS-safe mode, and export a real PDF — 100% local, zero subscription, zero cloud, zero telemetry.
